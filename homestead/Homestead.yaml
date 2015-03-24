@@ -1,0 +1,33 @@
+---
+ip: "192.168.10.10"
+memory: 4048
+cpus: 1
+provider: virtualbox
+
+authorize: ~/.ssh/id_rsa.pub
+
+keys:
+    - ~/.ssh/id_rsa
+
+folders:
+    - map: ./
+      to: /home/vagrant/custom_homestead
+    - map: ../webs
+      to: /home/vagrant/webs
+    - map: ../logs
+      to: /home/vagrant/logs
+
+sites:
+    - map: homestead.app
+      to: /home/vagrant/Code/Laravel/public
+
+databases:
+    - homestead
+
+variables:
+    - key: APP_ENV
+      value: local
+
+# blackfire:
+#     - id: foo
+#       token: bar

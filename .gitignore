@@ -1,0 +1,4 @@
+.vagrant/*
+tools/web/phpRedisAdmin/vendor/*
+.idea/*
+atlassian-ide-plugin.xml
